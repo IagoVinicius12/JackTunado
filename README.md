@@ -7,5 +7,6 @@ O algoritimo se comporta o tempo todo como um radar, que sempre confere as 5 pos
 após verificar todas essas posições, e encontrar a que possui maior valor, ele se moverá para aquela posição.
 Caso ocorra de todas as posições serem iguais, ele sempre se moverá para baixo, mirando chegar na ultima linha, onde o único objetivo dele será andar para a direita,
 até chegar no ponto definido como fim.
+#aaa
 
 
