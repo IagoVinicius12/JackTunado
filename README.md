@@ -25,3 +25,5 @@ Caso, no lopping nenhuma das condições de movimento sejam atendidas, será cha
 Nesta posição ele não poderá comparar o valor de duas posições, pois estas não estão na matriz,
 direita e diagonal direita. Dessa forma, qualquer lixo de memória não afetará o código e continuará se movendo pelo maior número que esteja dentro do vetor
 de duas dimensões.
+
+# Resultados de Testes
