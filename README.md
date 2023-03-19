@@ -36,14 +36,10 @@ de duas dimensões.
 
 <p>Resultados em Matriz 5x5:</p>
 <p>input:</p>
-<p>114     15      829     37      494</p>
-<p>851     444     898     425     591</p>
-<p>505     462     543     22      268</p>
-<p>11      455     16      781     790</p>
-<p>983     609     304     688     136</p>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/115949326/226215195-b79777c4-d9ca-4070-8a43-87a31bbfc5fb.png" width="250px"/>
+</div>
 <p>output:</p>
-<p>-1      15      829     37      494 </p>
-<p>-1      444     898     425     591 </p>
-<p>-1      -1      -1      22      268 </p>
-<p>11      455     16      -1      -1 </p>
-<p>983     609     304     -1      -2 </p>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/115949326/226215307-b0a8f2e0-38f1-4cc4-bc74-4d738ed7029d.png" width="250px"/>
+</div>
