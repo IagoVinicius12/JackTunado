@@ -16,6 +16,9 @@ O algoritimo se comporta o tempo todo como um radar, que sempre confere as 5 pos
 <p>Após verificar todas essas posições, e encontrar a que possui maior valor, ele se moverá para aquela posição.
 Caso ocorra de todas as posições serem iguais, ele sempre se moverá para baixo, mirando chegar na ultima linha, onde o único objetivo dele será andar para a direita,
 até chegar no ponto definido como fim.</p>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/115949326/226134020-0ffe6217-7e74-4272-b8d6-4d5098db4dee.png" width="250px"/>
+</div>
 
 # Casos especiais
 Caso, no lopping nenhuma das condições de movimento sejam atendidas, será chamada uma função de casos especiais.
