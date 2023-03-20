@@ -2,7 +2,7 @@
 Primeiro Laboratório de Algorítimos e Estrutura de Dados, foi proposto a resolução de um problema de movimentação na matriz,
 em que os dados eram lidos de um arquivo, os dados estavam em forma de matriz, e todos eram números.
 <p>Após transfomados em inteiros, 
-era aplicado o algorítimo guloso, que se movimentaria nos números que tinham maior valor.
+é aplicado o algorítimo guloso, que se movimentaria nos números que tinham maior valor.
 </p>
 
 # Funcionamento
@@ -13,8 +13,16 @@ O algoritimo se comporta o tempo todo como um radar, que sempre confere as 5 pos
 - Diagonal esquerda,
 - Atrás (Voltar para coluna anterior).
 
-<p>Após verificar todas essas posições, e encontrar a que possui maior valor, ele se moverá para aquela posição.
-Caso ocorra de todas as posições serem iguais, ele sempre se moverá para baixo, mirando chegar na ultima linha, onde o único objetivo dele será andar para a direita,
+<p>Após verificar todas essas posições, e encontrar a que possui maior valor, ele se moverá para aquela que possui o maior valor.</p>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/115949326/226216151-5f38b0f5-67bc-4159-87e7-4f9a958ea383.png" width="250px"/>
+<img src="https://user-images.githubusercontent.com/115949326/226216324-b24457f6-ec53-4570-a2f4-f349ac194369.png" width="250px"/>
+<img src="https://user-images.githubusercontent.com/115949326/226216428-1d8d3281-9c8d-4b17-bfa1-1332ce7c839c.png" width="250px"/>
+</div>
+
+- Mesmo que o objetivo do algoritmo esteja em seu alcance, ele ainda é um algorítimo guloso, então se moverá antes para os maiores valores, com a exceção de que ele esteja na ultima linha.
+- Assim que o algorítmo percebe que está na ultima linha, seu único objetivo é se mover para a direita, até o fim.
+<p>Caso ocorra de todas as posições serem iguais, ele sempre se moverá para baixo, mirando chegar na ultima linha, onde o único objetivo dele será andar para a direita,
 até chegar no ponto definido como fim.</p> <p>Ao andar, ele sempre marcará a posição já passada com -1, pois a matriz será somente de números positivos, então 
 não ocorrerá de por acaso, ele voltar à uma posição já passada, quando ele chegar ao fim, ele marcará o objetivo como -2.</p>
 <div align="center">
