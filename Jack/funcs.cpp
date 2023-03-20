@@ -74,11 +74,11 @@ void Funcs::ler(){
             for(int j=0;j<a;j++){
                 mat[i][j]=vet1[k];
                 k++;
-                //cout<<mat[i][j]<<"  ";
+                cout<<mat[i][j]<<"\t";
             }
-            //cout<<endl;
+            cout<<endl;
         }
-        //cout<<"=================================="<<endl;
+        cout<<"=================================="<<endl;
         short int h=0;
         int soma=0;
         soma+=mat[i][j];
@@ -143,8 +143,6 @@ void Funcs::ler(){
                 }
                 else if(j-1>=0&&(mat[i][j-1]>=mat[i+1][j-1])&&(mat[i][j-1]>mat[i][j+1] )&& (mat[i][j-1]>mat[i+1][j+1]) && (mat[i][j-1]>mat[i+1][j])){
                     mat[i][j]=-1;
-                    cout<<mat[i][j+1]<<endl;
-                    cout<<mat[i][j-1]<<endl;
                     j--;
                     soma+=mat[i][j];
                     //cout<<"atras"<<endl;
@@ -157,7 +155,15 @@ void Funcs::ler(){
                     //cout<<"diagonal baixo"<<endl;
                 }
                 else{
-                    int numero;
+                    int numero,k=0;
+                    for(int i=0;i<a;i++){
+                        for(int j=0;j<a;j++){
+                            vet1[k]=mat[i][j];
+                            k++;
+                            //cout<<vet1[k]<<"\t";
+                        }
+                        //cout<<endl;
+                    }
                     numero=casosespeciais(vet1,i,j);
                     if(numero==1){
                         mat[i][j]=-1;
@@ -187,8 +193,8 @@ void Funcs::ler(){
                         soma+=mat[i][j];
                     }
                 }
-                cout<<"soma:"<<soma<<endl;
         }
+        cout<<"soma:"<<soma<<endl;
         for(i=0;i<getnum();i++){
             for(j=0;j<getnum();j++){
                 cout<<mat[i][j]<<" \t";
@@ -199,13 +205,15 @@ void Funcs::ler(){
         //arq1>>n;
     }
 }
-int Funcs::casosespeciais(vector<short int> vet1,int i, int j){
+int Funcs::casosespeciais(vector<short int> vet1, short int i, short int j){
     int mataux[getnum()][getnum()],k=0;
     for(int l=0;l<getnum();l++){
         for(int d=0;d<getnum();d++){
             mataux[l][d]=vet1[k];
+            //cout<<mataux[l][d]<<"\t";
             k++;
         }
+        //cout<<endl;
     }
     if(j==0&& (mataux[i+1][j]>mataux[i][j+1]&& mataux[i+1][j]>mataux[i+1][j+1])){
         //cout<<"1"<<endl;
