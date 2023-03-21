@@ -18,16 +18,18 @@ short int Funcs::getnum(){
 }
 void Funcs::ler(){
     string n;
+    arq1.open("dataset/input.data");
     while(!arq1.eof()){
         vector<string> vet;
+        if(arq1.is_open()){
+        }
         if(a==0){
-            arq1.open("input.data");
             arq1>>n;
             arq1>>n;
             a=stoi(n);
             setnum(a);
         }
-        short int i=0, j=0,k=0, **mat;
+        short int k=0, **mat;
         mat= new short int *[a];
         for(int i=0;i<a;i++){
             mat[i]= new short int [a];
@@ -42,7 +44,7 @@ void Funcs::ler(){
         for(int i=0;i <= a;i++){
             m=strtok(vetorchar," \n\0");
             while(m){
-                if(m!="\0"){
+                if(*m!='\0'){
                     vet.push_back(m);
                 }
                 m=strtok(NULL," ");
@@ -55,7 +57,7 @@ void Funcs::ler(){
         }
         vector<string>vetor;
         short int c=1,d=0;
-        for(int i=0;i<vet.size()-1;i++){
+        for(int i=0;i<int(vet.size())-1;i++){
             //cout<<i<<":"<<vet[i]<<endl;
             if(i!=((a*c)+d)){
                 vetor.push_back(vet[i]);
@@ -65,12 +67,12 @@ void Funcs::ler(){
                 d++;
             }
         }
-        for(int i=0;i<vetor.size();i++){
+        for(int i=0;i<int(vetor.size());i++){
             //cout<<":"<<vetor[i]<<":"<<endl;
         }
         vector<short int> vet1;
         short int b=0;
-        for(int i=0;i<vetor.size();i++){
+        for(int i=0;i<int(vetor.size());i++){
             //if(){
             b=stoi(vetor[i]);
             //cout<<vet.size()<<endl;
@@ -95,31 +97,7 @@ void Funcs::andar(short int **mat){
         soma+=mat[i][j];
         mat[i][j]=-1;
         while(h!=1){
-                /*if(i+1== getnum()-1 && j==getnum() -1/*&& mat[i+1][j]>=mat[i][j-1]&& mat[i+1][j]>=mat[i+1][j-1]){
-                    mat[i][j]=-1;
-                    i++;
-                    h=1;
-                    soma+=mat[i][j];
-                    mat[i][j]=-2;
-                    cout<<"fim baixo"<<endl;
-                }
-                else if(j+1== getnum()-1 && i==getnum()-1){
-                    mat[i][j]=-1;
-                    j++;
-                    h=1;
-                    soma+=mat[i][j];
-                    mat[i][j]=-2;
-                    cout<<"fim frente"<<endl;
-                }
-                else if(i+1 ==getnum()-1 &&j+1==getnum()-1){
-                    mat[i][j]=-1;
-                    i++;
-                    j++;
-                    soma+=mat[i][j];
-                    h=1;
-                    mat[i][j]=-2;
-                    cout<<"fim diagonal"<<endl;
-                }*/
+            
                 if((j==getnum()-1&&mat[i+1][j]>=mat[i][j-1]&&mat[i+1][j]>=mat[i+1][j-1])||(i+1< getnum() && mat[i+1][j]>=mat[i+1][j-1]&& mat[i+1][j]>= mat[i][j-1]&& mat[i+1][j]>=mat[i][j+1] && mat[i+1][j]>=mat[i+1][j+1])){
                     mat[i][j]=-1;
                     i++;
@@ -237,7 +215,5 @@ int Funcs::casosespeciais(short int **mat, short int i, short int j){
         //cout<<"5"<<endl;
         return 5;
     }
+    return 0;
 }
-// void fechar(){
-//     arq1.close();
-// }
