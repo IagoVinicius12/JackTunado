@@ -43,11 +43,6 @@ de duas dimensões.
 # Resultados de Testes
 
 <p>Resultados em Matriz 5x5:</p>
-<p>input:</p>
 <div align="center">
-<img src="https://user-images.githubusercontent.com/115949326/226215195-b79777c4-d9ca-4070-8a43-87a31bbfc5fb.png" width="250px"/>
-</div>
-<p>output:</p>
-<div align="center">
-<img src="https://user-images.githubusercontent.com/115949326/226215307-b0a8f2e0-38f1-4cc4-bc74-4d738ed7029d.png" width="250px"/>
+<img src="https://user-images.githubusercontent.com/115949326/226613556-c024a58c-c471-41e7-8c90-f02084a1d83a.png" width="250px"/>
 </div>
