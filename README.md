@@ -46,3 +46,13 @@ de duas dimensões.
 <div align="center">
 <img src="https://user-images.githubusercontent.com/115949326/226613556-c024a58c-c471-41e7-8c90-f02084a1d83a.png" width="250px"/>
 </div>
+
+# Explicando as funções
+
+<p>Esse algorítmo possui 3 funções na classe funcs. Essas 3 funções cada uma é necessária para a resolução do problema.</p>
+- Primeira função: ler()
+<p>Esta função é usada para ler a matriz do arquivo, transmitindo os dados e transformando eles para inteiros (anteriormente caracteres), assim que eles são transformados para inteiros é montada a matriz e será chamada a segunda função.</p>
+- Segunda função: andar()
+<p>Esta função tem o objetivo de andar pela matriz de acordo com os padrões impostos pelo algoritmo guloso. Caso haja algum caso que não seja possível resolver nesta função ou que seja um provável erro, será chamada a terceira função.</p>
+- Terceira função: casosespeciais()
+<p>Esta função é chamada assim que a segunda função não consegue resolver um caso por si só, assim que chamada haverá uma grande sequência de condições que resolverão o caso.</p>
