@@ -46,6 +46,7 @@ de duas dimensões.
 <div align="center">
 <img src="https://user-images.githubusercontent.com/115949326/226613556-c024a58c-c471-41e7-8c90-f02084a1d83a.png" width="250px"/>
 </div>
+<p>Esta imagem representa a resolução da matriz, tendo a matriz de input e após ser refeita pelo algoritmo, ela é marcada com -1 nos lugares por onde passou. Ela é um caso geral mas funciona para qualquer outro tamanho.
 
 # Explicando as funções
 
