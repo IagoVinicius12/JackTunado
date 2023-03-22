@@ -63,3 +63,14 @@ de duas dimensões.
 - Terceira função: casosespeciais()
 
 <p>Esta função é chamada assim que a segunda função não consegue resolver um caso por si só, assim que chamada haverá uma grande sequência de condições que resolverão o caso. Por exemplo, para não correr o risco de sair da matriz, caso a posição da coluna seja a última, ele não poderá andar para a próxima coluna ou pela diagonal direita.</p>
+
+# Compilação e Execução
+
+Esse pequeno exemplo possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
+
+
+| Comando                |  Função                                                                                           |                     
+| -----------------------| ------------------------------------------------------------------------------------------------- |
+|  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
+|  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
+|  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
