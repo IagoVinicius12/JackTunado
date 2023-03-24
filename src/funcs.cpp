@@ -4,9 +4,6 @@
 #include <vector>
 #include "funcs.hpp"
 using namespace std;
-fstream arq1;
-short int a=0;
-//int num=0;
 Funcs::Funcs(){
     setnum(0);
 }
@@ -18,6 +15,8 @@ short int Funcs::getnum(){
 }
 void Funcs::ler(){
     string n;
+    fstream arq1;
+    short int a=0;
     arq1.open("dataset/input.data");
     while(!arq1.eof()){
         vector<string> vet;
@@ -49,7 +48,6 @@ void Funcs::ler(){
                 }
                 m=strtok(NULL," ");
             }
-            //cout<<vet[i];
             if(i<a-1){
                 getline(arq1,n);
                 strcpy(vetorchar,n.c_str());
@@ -58,7 +56,6 @@ void Funcs::ler(){
         vector<string>vetor;
         short int c=1,d=0;
         for(int i=0;i<int(vet.size())-1;i++){
-            //cout<<i<<":"<<vet[i]<<endl;
             if(i!=((a*c)+d)){
                 vetor.push_back(vet[i]);
             }
@@ -68,15 +65,11 @@ void Funcs::ler(){
             }
         }
         for(int i=0;i<int(vetor.size());i++){
-            //cout<<":"<<vetor[i]<<":"<<endl;
         }
         vector<short int> vet1;
         short int b=0;
         for(int i=0;i<int(vetor.size());i++){
-            //if(){
             b=stoi(vetor[i]);
-            //cout<<vet.size()<<endl;
-            //cout<<vet[i]<<endl;
             vet1.push_back(b);
         }
         for(int i=0;i<a;i++){
@@ -102,7 +95,6 @@ void Funcs::andar(short int **mat){
                     mat[i][j]=-1;
                     i++;
                     soma+=mat[i][j];
-                    //cout<<"baixo"<<endl;
                     if(i== getnum()-1 && j==getnum() -1){
                         h=1;
                         mat[i][j]=-2;
@@ -112,7 +104,6 @@ void Funcs::andar(short int **mat){
                     mat[i][j]=-1;
                     j++;
                     soma+=mat[i][j];
-                    //cout<<"direita"<<endl;
                     if(j== getnum()-1 && i==getnum()-1){
                         h=1;
                         mat[i][j]=-2;
@@ -123,8 +114,6 @@ void Funcs::andar(short int **mat){
                     i++;
                     j++;
                     soma+=mat[i][j];
-                    //cout<<"mat["<<i<<"]["<<j<<"]"<<endl;
-                    //cout<<"diagonal"<<endl;
                     if(i ==getnum()-1 &&j==getnum()-1){
                         h=1;
                         mat[i][j]=-2;
@@ -134,14 +123,12 @@ void Funcs::andar(short int **mat){
                     mat[i][j]=-1;
                     j--;
                     soma+=mat[i][j];
-                    //cout<<"atras"<<endl;
                 }
                 else if(j-1>=0&&i+1<getnum()&&mat[i+1][j-1]>mat[i+1][j]&&mat[i+1][j-1]>mat[i][j+1] && mat[i+1][j-1]>mat[i+1][j+1] && mat[i+1][j-1]>mat[i][j-1]){
                     mat[i][j]=-1;
                     j--;
                     i++;
                     soma+=mat[i][j];
-                    //cout<<"diagonal baixo"<<endl;
                 }
                 else{
                     int numero;
@@ -183,36 +170,21 @@ void Funcs::andar(short int **mat){
             cout<<endl;
         }
         cout<<"=================================="<<endl;
-        //arq1>>n;
 }
 int Funcs::casosespeciais(short int **mat, short int i, short int j){
-    // int mat[getnum()][getnum()],k=0;
-    // for(int l=0;l<getnum();l++){
-    //     for(int d=0;d<getnum();d++){
-    //         mataux[l][d]=vet1[k];
-    //         //cout<<mataux[l][d]<<"\t";
-    //         k++;
-    //     }
-        //cout<<endl;
-    //}
     if(j==0&& (mat[i+1][j]>mat[i][j+1]&& mat[i+1][j]>mat[i+1][j+1])){
-        //cout<<"1"<<endl;
         return 1;
     }
     else if(j==0&& (mat[i][j+1]>mat[i+1][j]&& mat[i][j+1]>mat[i+1][j+1])){
-        //cout<<"2"<<endl;
         return 2;
     }
     else if(j==0&& (mat[i+1][j+1]>mat[i+1][j]&& mat[i+1][j+1]>mat[i][j+1])){
-        //cout<<"3"<<endl;
         return 3;
     }
     else if(j==getnum()-1 &&(mat[i][j-1]>=mat[i+1][j]&&mat[i][j-1]>=mat[i+1][j-1])){
-        //cout<<"4"<<endl;
         return 4;
     }
     else if(j==getnum()-1 &&(mat[i+1][j-1]>=mat[i+1][j]&&mat[i+1][j-1]>=mat[i][j-1])){
-        //cout<<"5"<<endl;
         return 5;
     }
     return 0;

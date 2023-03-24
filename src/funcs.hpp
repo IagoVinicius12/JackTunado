@@ -6,7 +6,6 @@ class Funcs
 {
 private:
     short int num, **mat;
-    vector<short int> vet1;
 public:
     Funcs();
     void ler();
